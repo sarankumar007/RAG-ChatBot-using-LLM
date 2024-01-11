@@ -1,0 +1,669 @@
+/* Common Styles */
+ * {
+   margin: 0;
+   padding: 0;
+
+ }
+
+ body {
+   margin: 0;
+   padding: 0;
+   font-family: 'Arial', sans-serif;
+   overflow-x: hidden;
+
+ }
+
+
+ /* MAIN BACKGROUND IMAGE */
+ .front {
+   background-image: url('https://www.dell.org/wp-content/uploads/2020/04/A-young-indian-woman-working-at-a-computer-for-supported-Jobs-and-Livelihoods.jpeg');
+   background-size: cover;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+
+   height: 100vh;
+   width: 100vw;
+
+ }
+
+ /* HEADER STYLES */
+
+ #loginHeader {
+   font-family: 'Helvetica', sans-serif;
+   background-color: transparent;
+   color: white;
+   padding: 10px 30px 10px 50px;
+ }
+
+ #mainHeader {
+   font-family: sans-serif;
+   background-color: transparent;
+   color: white;
+   padding: 10px 30px 10px 40px;
+ }
+
+ .header-container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+
+
+ .head1-buttons .myButton {
+   margin-right: 10px;
+
+
+ }
+
+ .myButton {
+   margin-top: 30px;
+   width: 200px;
+   height: 40px;
+   font-size: smaller;
+   background-color: transparent;
+   border: 1px solid #E4032F;
+   cursor: pointer;
+   font-size: 15px;
+   font-weight: bolder;
+   color: #E4032F;
+   border-radius: 6px;
+   letter-spacing: 4px;
+   transition: 0.3s;
+ }
+
+ /* Add the hover effect */
+ .myButton:hover {
+   background-color: #E4032F;
+   color: white;
+   cursor: pointer;
+   transition: 0.3s;
+ }
+
+ .head2-buttons .a {
+   margin-right: 30px;
+   font-size: larger;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+ }
+
+
+ .a {
+
+   color: white;
+   text-decoration: none;
+   background-image: linear-gradient(white, white);
+   background-position: 0% 100%;
+   /* Start from the left */
+   background-repeat: no-repeat;
+   background-size: 0 3px;
+   /* Fully hidden initially */
+   transition-duration: .5s;
+   padding-bottom: 5px;
+ }
+
+ .a:hover {
+   background-size: 100% 3px;
+   /* Expand to the right */
+   transition-duration: .5s;
+ }
+
+ .a:not(:hover) {
+   background-position: 50% 100%;
+   background-size: 0 3px;
+   /* Shrink to the right when not hovered */
+   transition-duration: .5s;
+ }
+
+
+
+ .language-option select {
+   color: white;
+   background-color: black;
+   padding: 8px;
+   border-radius: 10px;
+ }
+
+
+ .logo-head-container {
+   display: flex;
+ }
+
+ .header-logo {
+   margin-right: 5px;
+ }
+
+ .header-logo img {
+   max-width: 100px;
+ }
+
+ .headings {
+   margin-top: 5px;
+   margin-left: 12px;
+
+ }
+
+ .headings h4,
+ h5 {
+
+   margin: 0;
+ }
+
+ .headings h4 {
+   font-size: 28px;
+   font-weight: bold;
+   letter-spacing: 1px;
+   word-spacing: 1px;
+   color: white;
+   margin-bottom: 5px;
+ }
+
+ .headings h5 {
+   font-size: 16px;
+   font-weight: bold;
+   color: whitesmokex;
+ }
+
+ /* MARQUEE STYLES */
+ .marquee-container {
+   white-space: nowrap;
+   overflow: hidden;
+ }
+
+ .marquee-item {
+   display: inline-block;
+   margin-right: 20px;
+   padding: 2px;
+   font-family: cursive;
+   font-size: medium;
+   color: #f0f3f2;
+   border-radius: 10px;
+   background-color: #e229276b;
+   ;
+ }
+
+
+ /*  MAIN-CONTAINER-FIRST */
+ .main-container-first {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   margin: 0px 0px 0px 0px;
+   padding: 100px 40px 100px 40px;
+   background-color: #f0f3f2;
+ }
+
+ /* LOGO */
+ .main-container-first-logo {
+   max-width: 100px;
+   margin-top: 100px;
+
+ }
+
+ .main-container-first-logo :hover {
+   transform: scale(1.1);
+   transition: transform 0.3s;
+ }
+
+
+
+ .job-search-container {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   flex-wrap: wrap;
+ }
+
+ .job-item {
+   width: calc(25% - 10px);
+   box-sizing: border-box;
+ }
+
+ .job-search-container select,
+ input {
+   width: 100%;
+   padding: 8px;
+   margin-bottom: 10px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+ }
+
+
+
+ .job-search-form button {
+   padding: 10px;
+   background-color: #3498db;
+   color: white;
+   border: none;
+   cursor: pointer;
+ }
+
+ /* JOB-INFO-CONTAINER */
+
+ .main-job-search-container {
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   background-color: white;
+   padding: 40px;
+   border-radius: 8px;
+ }
+
+ .job-info-container {
+   display: flex;
+   justify-content: space-between;
+   max-width: 900px;
+   margin: 20px auto;
+   background-color: #fff;
+   border-radius: 8px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   padding: 20px;
+ }
+
+ .job-info-box {
+   text-align: center;
+   /* flex: 1; */
+   max-width: 200px;
+   border: 1px solid #ddd;
+   border-radius: 10px;
+   /* box-sizing: border-box; */
+ }
+
+ .job-info-box h2 {
+
+   padding: 10px;
+   color: #666;
+   background-color: #ebebeb;
+ }
+
+ .job-info-box p {
+   margin: 0;
+   padding: 18px 10px 18px 10px;
+   color: #333;
+   font-size: 12px;
+   font-weight: bolder;
+   background-color: #dbffe0;
+ }
+
+ /* LOGIN FORM SECTION */
+ .login-form {
+
+   max-width: 300px;
+   margin: 20px auto;
+
+ }
+
+ .login-container {
+   max-width: 300px;
+   background-color: #fff;
+   padding: 40px;
+   border-radius: 8px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   text-align: center;
+ }
+
+ .login-container h2 {
+   margin-bottom: 20px;
+ }
+
+ .login-form input {
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 15px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+ }
+
+ .login-form button {
+   width: 100%;
+   padding: 10px;
+   background-color: #3498db;
+   color: white;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+ }
+
+ .forgot-password {
+   margin-top: 10px;
+   text-decoration: none;
+   color: #3498db;
+   display: block;
+ }
+
+ .register-btn {
+   margin-top: 20px;
+   text-decoration: none;
+   color: #fff;
+   background-color: #2ecc71;
+   padding: 10px;
+   border-radius: 4px;
+   display: block;
+ }
+
+
+
+ /* MAIN-CONTAINER-SECOND */
+
+ .main-container-second {
+   display: flex;
+   flex-wrap: wrap;
+   /* Allow items to wrap to the next row */
+   padding: 50px 0px 50px 50px;
+   justify-content: space-around;
+
+
+ }
+
+ .main-container-second-heading {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   margin-top: 100px;
+   margin-right: 20px;
+ }
+
+ .main-container-second-heading h1 {
+   font-size: 34px;
+   margin-bottom: 10px;
+   letter-spacing: 2px;
+ }
+
+ .main-container-second-heading a {
+   font-size: 17px;
+   width: 80px;
+   color: #5C5C65;
+   text-decoration: none;
+   background-image: linear-gradient(black, black);
+   background-position: 0% 100%;
+   /* Start from the left */
+   background-repeat: no-repeat;
+   background-size: 0 2px;
+   /* Fully hidden initially */
+   transition-duration: .5s;
+   padding-bottom: 5px;
+   padding-left: 2px;
+
+ }
+
+ .main-container-second-heading a:hover {
+   color: #5C5C65;
+   background-size: 100% 2px;
+   /* Expand to the right */
+   transition-duration: .5s;
+ }
+
+ .main-container-second-heading a:not(:hover) {
+   color: #5C5C65;
+   background-position: 50% 100%;
+   background-size: 0 2px;
+   /* Shrink to the right when not hovered */
+   transition-duration: .5s;
+ }
+
+ /* Container for the image boxes */
+ .image-box-container {
+   display: flex;
+   flex-wrap: wrap;
+   /* Allow items to wrap to the next row */
+   justify-content: space-around;
+   max-width: 1000px;
+   padding: 30px;
+   margin: 0px 0px 0px 0px;
+
+
+ }
+
+ /* Individual image box styles */
+ .image-box {
+   position: relative;
+   width: 200px;
+   margin-bottom: 20px;
+   /* Add margin between the boxes */
+   padding: 15px;
+   background-color: #fff;
+   border-radius: 8px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+   overflow: hidden;
+   transition: transform 0.3s;
+ }
+
+ /* Styling for the image inside the box */
+ .image-box img {
+   max-width: 100%;
+   height: auto;
+   border-radius: 4px;
+ }
+
+ /* Styling for the title inside the box */
+ .image-box h3 {
+   margin-top: 10px;
+   font-size: 18px;
+   color: #333;
+ }
+
+ /* Hover effect on the image box */
+ .image-box:hover {
+   transform: scale(1.05);
+ }
+
+ /* Overlay effect on hover */
+ .image-box:before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.3);
+   opacity: 0;
+   transition: opacity 0.3s;
+ }
+
+ .image-box:hover:before {
+   opacity: 1;
+ }
+
+
+
+ /* MAIN-CONTAINER-THIRD */
+ .main-container-third {
+   margin: 40px;
+   padding: 50px;
+   display: flex;
+   justify-content: space-around;
+   background-color: #cfe7d9;
+   border-radius: 20px;
+   flex-wrap: wrap;
+ }
+
+ .main-container-third h2 {
+   color: #001E2B;
+   font-family: sans-serif;
+   font-size: 48px;
+   margin-top: 55px;
+   margin-bottom: 25px;
+   font-style: normal;
+   font-weight: 700;
+   letter-spacing: 2px;
+ }
+
+ .main-container-third p {
+   color: #5C5C65;
+   font-family: sans-serif;
+   font-size: 20px;
+   font-weight: 500;
+   letter-spacing: 1px;
+
+ }
+
+ .main-container-third video {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   border-radius: 10px;
+ }
+
+
+ /* MAIN-CONTAINER-FOURTH */
+ .main-container-fourth {
+   display: flex;
+   flex-wrap: wrap;
+   /* Allow items to wrap to the next row */
+   padding: 50px 0px 50px 50px;
+   flex-direction: row-reverse;
+   justify-content: space-around;
+   background-color: #f0f3f2;
+
+ }
+
+ .main-container-fourth-heading {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   margin-top: 200px;
+   margin-right: 20px;
+
+
+ }
+
+ .main-container-fourth-heading h1 {
+   font-size: 34px;
+   margin-bottom: 20px;
+   letter-spacing: 2px;
+ }
+
+ /* button */
+ .main-container-fourth .sbutton {
+
+
+   width: 170px;
+   height: 50px;
+   font-size: larger;
+   background-color: transparent;
+   border: 1px solid black;
+
+   cursor: pointer;
+   font-size: 15px;
+   font-weight: bolder;
+   color: black;
+   transition: 0.3s;
+ }
+
+
+ .main-container-fourth .sbutton:hover {
+   background-color: black;
+   color: white;
+ }
+
+ /* button */
+
+
+ /* CALENDER */
+ #calendar {
+   padding: 40px;
+   border-radius: 20px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   background-color: #f0f8ff;
+   max-width: 800px;
+   max-height: 600px;
+
+   margin: 0 auto;
+ }
+
+ #eventModal {
+   border-radius: 20px;
+   display: none;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background: #fff;
+   padding: 20px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   z-index: 1000;
+ }
+
+ #eventForm {
+   border-radius: 20px;
+   margin-bottom: 0;
+ }
+
+
+
+
+
+
+
+
+
+
+
+ /* FOOTER */
+ footer {
+   background-color: #121212;
+   color: white;
+   height: 620px;
+ }
+
+ .footer-heading {
+   text-align: center;
+
+   padding: 200px 0px 120px 0px;
+ }
+
+ .footer-heading h1 {
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   margin-bottom: 20px;
+ }
+
+ .footer-heading p {
+   font-family: 'Times New Roman', Times, serif;
+   color: #777777;
+   font-style: italic;
+   font-size: 20px;
+ }
+
+
+ .footer-middle {
+   text-align: center;
+   margin-bottom: 20px;
+
+ }
+
+
+ .fa {
+   margin-right: 4px;
+   padding: 17px;
+   font-size: 14px;
+   width: 14px;
+   text-align: center;
+   text-decoration: none;
+   color: white;
+   border: 1px solid #212121;
+   border-radius: 50%;
+   box-shadow: inset 0 0 0 1px #212121;
+   transition: box-shadow 0.5s ease;
+ }
+
+ .fa:hover {
+   transition-duration: 0.9s;
+   color: black;
+   box-shadow: inset 0 0 0 50px white;
+   /* Increase the size as needed */
+ }
+
+
+
+
+ .footer-line {
+   border-top: 1px solid #212121;
+   margin: 0px 200px 0px 200px;
+ }
+
+ .footer-ending {
+   text-align: center;
+   margin-top: 40px;
+ }
+
+ .footer-ending p {
+   font-family: Arial, Helvetica, sans-serif;
+   color: #777777;
+   font-size: 12px;
+   margin-bottom: 3px;
+ }

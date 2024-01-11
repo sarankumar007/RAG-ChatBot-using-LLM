@@ -1,0 +1,137 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: #f0f0f0;
+    /* Set a background color for the body */
+    padding: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.main-container {
+
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    /* Add border radius for rounded corners */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+
+/* FIRST */
+.first {
+    height: 740px;
+    width: 600px;
+    background-color: #f9b154;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.first p {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+.first li {
+    font-size: 15px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: lighter;
+}
+
+/* SECOND */
+.second {
+
+    width: 600px;
+    background-color: rgb(241, 234, 222);
+    border-radius: 10px;
+    padding: 40px;
+}
+
+
+
+/* FORM */
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+form     {
+    margin: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+}
+
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Style for when the user hovers over the select element */
+select:hover {
+    border-color: #666;
+}
+
+/* Style for when the user focuses on the select element */
+select:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.7);
+}
+
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: solid 1px black;
+    border-radius: 4px;
+}
+
+button,
+.sub {
+    background-color: #4caf50;
+    color: white;
+    border: 1px solid rgb(126, 204, 156);
+    padding: 10px;
+
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+button:hover,
+.sub:hover {
+    background-color: white;
+    color: #4caf50;
+}
+
+.formtwo {
+    display: none;
+}

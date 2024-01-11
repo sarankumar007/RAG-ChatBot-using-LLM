@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='chatStyle.css') }}">
+<!-- SOCIAL MEDIA ICON -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- CALENDER -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+</head>
+<body>
+<div class="front">
+
+    <!-- HEADER -->
+    <!-- HEADER-FIRST -->
+    <div id="main-header">
+      <header id="loginHeader">
+        <div class="header-container">
+          <div class="head1-buttons">
+            <button class="myButton" type="button">User Manuals</button>
+            <button class="myButton" type="button">Screen Reader</button>
+          </div>
+
+          <div id="google_translate_element" class="language-option"></div>
+        </div>
+      </header>
+      <!-- HEADER-SECOND -->
+      <header id="mainHeader">
+        <div class="header-container">
+          <div class="logo-head-container">
+            <div class="header-logo">
+              <img src="static/images/main_logo.png" alt="Logo">
+            </div>
+            <div class="headings">
+              <h4>PUNJAB GHAR GHAR ROZGAR</h4>
+              <h5>Department of Employment Generation,</h5>
+              <h5>Skill Development & Training- Govt. Of Punjab, India3</h5>
+            </div>
+          </div>
+          <div class="head2-buttons">
+            <a href="" class="a">Home</a>
+            <a href="" class="a">About Us</a>
+            <a href="" class="a">Contact Us</a>
+            <a href="/dashboard" class="a">DashBoard</a>
+
+          </div>
+        </div>
+        <!-- MARQUEE -->
+        <div class="marquee-container">
+          <marquee behavior="" direction="">
+            <div class="marquee-item">List of registered Recruiting Agents in Punjab-for sending abroad on work visa
+            </div>
+            <div class="marquee-item">Vacancies advertised by Punjab Public Service Commission are available at <a
+                href="https://ppsc.gov.in/" target="_blank">https://ppsc.gov.in/</a></div>
+            <div class="marquee-item">Beware of Fraudulent/Fake Employers</div>
+          </marquee>
+        </div>
+      </header>
+    </div>
+
+
+
+
+  </div>
+
+
+  <!-- MAIN-CONTAINER-FIRST -->
+  <div class="main-container-first">
+
+    <!-- LOGO -->
+    <div class="main-container-first-logo">
+      <img src="static/images/main_logo_2.png" alt="Logo">
+    </div>
+
+    <!-- JOB SEARCH FORM -->
+    <div class="main-job-search-container">
+      <h2 style="margin-bottom: 20px; text-align: center;">Fill out the form below to search Jobs</h2>
+      <form class="job-search-form" action="#" method="post">
+        <div class="job-search-container">
+          <div class="job-item">
+            <select id="jobType" name="jobType" placeholder="Select Job Type">
+              <option value="">Select Job Type</option>
+              <option value="private">Private</option>
+              <option value="government">Government</option>
+            </select>
+          </div>
+
+          <div class="job-item">
+            <select id="qualification" name="qualification" placeholder="Select Qualification">
+              <option value="">Select Qualification</option>
+              <option value="10">No Schooling</option>
+              <option value="1">5th</option>
+              <option value="2">8th</option>
+              <option value="3">10th</option>
+              <option value="4">12th</option>
+              <option value="5">Diploma After 10th</option>
+              <option value="6">Diploma After 12th</option>
+              <option value="11">ITI</option>
+              <option value="7">Graduate</option>
+              <option value="12">PG Diploma</option>
+              <option value="8">Post Graduate</option>
+              <option value="13">M Phill</option>
+              <option value="9">Phd</option>
+            </select>
+          </div>
+
+          <div class="job-item">
+            <select id="experience" name="experience" placeholder="Select Experience">
+              <option value="">Experience up to (in years)</option>
+              <option value="1">Fresher</option>
+              <option value="2">1 year experience</option>
+              <option value="3">2 years experience</option>
+              <option value="4">3 years experience</option>
+              <option value="5">4 years experience</option>
+              <option value="6">5 years experience</option>
+              <option value="7">6 years experience</option>
+              <option value="8">7 years experience</option>
+              <option value="9">8 years experience</option>
+              <option value="10">9 years experience</option>
+              <option value="11">10 years experience</option>
+            </select>
+          </div>
+
+          <div class="job-item">
+            <input type="text" id="placeOfPosting" name="placeOfPosting" placeholder="Place of Posting">
+          </div>
+        </div>
+
+        <p style="text-align: center; margin: 0; letter-spacing: 3px;">-----OR-----</p>
+        <input type="text" id="jobTitle" name="jobTitle" placeholder="Enter Job Title">
+
+        <button type="submit">Search Jobs</button>
+      </form>
+
+      <!-- JOB-INFO-CONTAINER -->
+      <div class="job-info-container">
+        <div class="job-info-box">
+          <h2>12323</h2>
+          <p>Available Govt. Jobs</p>
+        </div>
+        <div class="job-info-box">
+          <h2>232</h2>
+          <p>Available Private Jobs</p>
+        </div>
+        <div class="job-info-box">
+          <h2>4454</h2>
+          <p>Registered Job Seekers</p>
+        </div>
+        <div class="job-info-box">
+          <h2>5644</h2>
+          <p>Registered Employers</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOGIN FORM SECTION -->
+    <div class="login-container">
+      <h2>Login</h2>
+      <form class="login-form" action="/login" method="post">
+        <input type="text" id="username" name="username" placeholder="Username" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+      <a href="#" class="forgot-password">Forgot Password?</a>
+      <a href="/registration" class="register-btn">Register</a>
+    </div>
+  </div>
+
+
+  <!-- MAIN-CONTAINER-SECOND -->
+  <div class="main-container-second">
+    <div class="main-container-second-heading">
+      <h1>Employment <br> Services</h1>
+      <a href="">view more</a>
+    </div>
+    <div class="image-box-container">
+     <div class="image-box" id="imageBox1">
+        <img src="https://pgrkam.com/images/icon7.png" alt="Image 1">
+        <h3>Jobs</h3>
+      </div>
+      <div class="image-box" id="imageBox2">
+        <img src="https://pgrkam.com/images/icon5.png" alt="Image 2">
+        <h3>Skill Training</h3>
+      </div>
+      <div class="image-box" id="imageBox3">
+        <img src="https://pgrkam.com/images/icon7.png" alt="Image 3">
+        <h3>Self Employment</h3>
+      </div>
+      <div class="image-box" id="imageBox4">
+        <img src="https://pgrkam.com/images/service-ico.png" alt="Image 4">
+        <h3>Local Servics</h3>
+      </div>
+      <div class="image-box" id="imageBox5">
+        <img src="https://pgrkam.com/images/jobforwoman2.png" alt="Image 5">
+        <h3>Jobs For Women</h3>
+      </div>
+      <div class="image-box" id="imageBox6">
+        <img src="https://pgrkam.com/images/disabled.png" alt="Image 6">
+        <h3>Jobs For Persons With Disabliliy</h3>
+      </div>
+      <div class="image-box" id="imageBox7">
+        <img src="https://pgrkam.com/images/icon1.png" alt="Image 7">
+        <h3>Inducion into Armed Forces</h3>
+      </div>
+      <div class="image-box" id="imageBox8">
+        <img src="https://pgrkam.com/images/icon2.png" alt="Image 8">
+        <h3>Counselling</h3>
+      </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- MAIN-CONTAINER-FOURTH -->
+  <div class="main-container-fourth">
+    <div class="main-container-fourth-heading">
+      <h1>Other Events and <br>session calender</h1>
+      <button type="button" class="sbutton">READ MORE</button>
+    </div>
+    <div>
+
+      <div id="calendar"></div>
+
+      <div id="eventModal">
+        <h2>Add Event</h2>
+        <form id="eventForm">
+          <label for="eventName">Event Name:</label>
+          <input type="text" id="eventName" name="eventName" required>
+          <label for="eventDate">Event Date:</label>
+          <input type="date" id="eventDate" name="eventDate" required>
+          <button type="submit">Add Event</button>
+        </form>
+        <span class="close">&times;</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- MAIN-CONTAINER-THIRD -->
+  <div class="main-container-third">
+    <div>
+      <h2>Punjab Career <br> Harvest</h2>
+      <p>Bridging Futures, Connecting Careers <br>in the Heart of Punjab's Professional <br>Landscape."
+      </p>
+    </div>
+    <div>
+      <video src="static/media/indiavideo.mp4" autoplay muted loop></video>
+    </div>
+  </div>
+
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-heading">
+      <h1>"Creativity is intelligence having fun."</h1>
+      <p>Albert Einstein</p>
+    </div>
+
+    <div class="footer-middle">
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-google"></a>
+      <a href="#" class="fa fa-linkedin"></a>
+      <a href="#" class="fa fa-youtube"></a>
+      <a href="#" class="fa fa-instagram"></a>
+      <a href="#" class="fa fa-pinterest"></a>
+    </div>
+
+    <div class="footer-line"></div> <!-- Add this line -->
+    <div class="footer-ending">
+      <p>© 2023 The JOY, s.r.o. All Rights Reserved. Bottova 1863/2A, 972 01 Bojnice, Slovakia (European Union)</p>
+      <p>By using this website, you agree to the use of cookies.</p>
+      <p>Cookies & Privacy policy</p>
+    </div>
+  </footer>
+
+
+
+
+  <!-- --------SCRIPT-------- -->
+
+  <!-- CALENDER -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+  <!-- CALENDER -->
+
+  <!-- GOOGLE TRANSLATE -->
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+
+    // <!-- GOOGLE TRANSLATE -->
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'en' },
+    'google_translate_element'
+  );
+}
+
+
+
+// CALENDER
+$(document).ready(function () {
+  const calendar = $('#calendar');
+  const eventModal = $('#eventModal');
+  const eventForm = $('#eventForm');
+  const eventNameInput = $('#eventName');
+  const eventDateInput = $('#eventDate');
+  const closeBtn = $('.close');
+
+  calendar.fullCalendar({
+    header: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'month,agendaWeek,agendaDay'
+    },
+    defaultView: 'month',
+    editable: true,
+    eventLimit: true,
+    events: [],
+    dayClick: function (date, jsEvent, view) {
+      eventModal.show();
+      eventDateInput.val(date.format('YYYY-MM-DD'));
+    },
+    eventClick: function (event) {
+      alert('Event: ' + event.title);
+    }
+  });
+
+  eventForm.submit(function (e) {
+    e.preventDefault();
+    const eventName = eventNameInput.val();
+    const eventDate = eventDateInput.val();
+
+    if (eventName && eventDate) {
+      const newEvent = {
+        title: eventName,
+        start: eventDate
+      };
+
+      calendar.fullCalendar('renderEvent', newEvent, true);
+      eventModal.hide();
+      eventNameInput.val('');
+      eventDateInput.val('');
+    }
+  });
+
+  closeBtn.click(function () {
+    eventModal.hide();
+  });
+
+  eventModal.click(function (event) {
+    if (event.target === this) {
+      eventModal.hide();
+    }
+  });
+});
+// CALENDER
+</script>
+<div class="container">
+    <div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="static/images/pgrkam.png" alt="image">
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">PGRKamAssist</h4>
+                    <p class="chatbox__description--header">Get answers to your queries in any language</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer">
+               <div id="infoBox">Say something</div>
+              <button id="voiceButton"><i class="fa fa-microphone" style="font-size:24px"></i></button>
+                <input id="recognizedText" type="text" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button">Send</button>
+            </div>
+        </div>
+        <div class="chatbox__button">
+            <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+        </div>
+    </div>
+</div>
+
+    <script>
+        $SCRIPT_ROOT = {{ request.script_root|tojson }};
+    </script>
+    <script >class  Chatbox{
+    constructor(){
+        this.args={
+        openButton: document.querySelector('.chatbox__button'),
+        chatBox: document.querySelector('.chatbox__support'),
+        sendButton:   document.querySelector('.send__button')
+
+        }
+
+        this.state=false;
+        this.messages=[];
+
+
+    }
+
+    display(){
+        const {openButton,chatBox,sendButton}=  this.args;
+
+        openButton.addEventListener('click',()=>this.toggleState(chatBox))
+        sendButton.addEventListener('click',()=>this.onSendButton(chatBox))
+
+        const  node=chatBox.querySelector('input');
+        node.addEventListener("keyup",({key})=>{
+            if( key=="Enter"){
+                this.onSendButton(chatBox)
+            }
+    })
+}
+
+    toggleState(chatBox){
+        this.state=!this.state;
+        if(this.state){
+            chatBox.classList.add('chatbox--active')
+            var html='<a href="https://example.com" class="start-buttons">Visit Example.com</a>';
+            const chatmessage = chatbox.querySelector('.chatbox__messages');
+        chatmessage.innerHTML = html;
+        }
+        else{
+            chatBox.classList.remove('chatbox--active')
+        }
+
+    }
+
+    onSendButton(chatBox){
+    var textField=chatBox.querySelector('input');
+    let text1=textField.value
+    if(text1==""){
+    return;
+    }
+
+    let msg1={name:"User",message:text1}
+    this.messages.push(msg1);
+
+    fetch($SCRIPT_ROOT + '/predict',{
+    method: 'POST',
+    body: JSON.stringify({message:text1}),
+    mode:'cors',
+    headers:{
+    'Content-Type': 'application/json'
+    },
+
+    })
+    .then(r=>r.json())
+    .then(r=>{
+    let msg2={name:"Sam",message: r.answer};
+    this.messages.push(msg2);
+    this.updateChatText(chatBox)
+    textField.value=''
+    }). catch((error)=>{
+    console.error('Error:',error);
+    this.updateChatText(chatBox)
+    textField.value=''
+
+    });
+
+    }
+
+
+
+    updateChatText(chatBox){
+    var html='';
+    this.messages.slice().reverse().forEach(function(item,){
+        if(item.name=="Sam"){
+        const urlRegex = /(https?:\/\/[^\s]+)/g;
+        const messageWithLink = item.message.replace(urlRegex, '<a href="$1" target="_blank">$1</a>');
+        html+='<div class="messages__item messages__item--visitor">' + messageWithLink + '</div>'
+        }
+        else{
+        html+='<div class="messages__item messages__item--operator">' + item.message +'</div>'
+        }
+    });
+
+    const chatmessage=chatBox.querySelector('.chatbox__messages');
+    chatmessage.innerHTML=html;
+    chatmessage.scrollTop = chatmessage.scrollHeight;
+
+    }
+
+   }
+
+ const chatbox=new Chatbox();
+ chatbox.display();</script>
+
+
+<!--VOICE SCRIPT-->
+<script>
+          $(document).ready(function() {
+            $("#voiceButton").on("click", function() {
+                $.post("/recognize", function(data) {
+                    $("#recognizedText").val(data.text);
+                    alert("Language detected: " + data.language);
+                });
+            });
+        });
+  document.getElementById("voiceButton").addEventListener("click", function() {
+            var infoBox = document.getElementById("infoBox");
+            infoBox.style.display = "block";
+
+            // You can add additional logic or content to the info box here
+
+            // For example, let's hide the box after 2 seconds
+            setTimeout(function() {
+                infoBox.style.display = "none";
+            }, 2000);
+        });</script>
+
+  <script>
+        function fetchChatbotResponse() {
+            // Make an AJAX request to your Flask server
+            // Update the URL and other parameters based on your server setup
+            fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ message: 'Your user input here' }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display the text response
+                document.getElementById('response-container').innerText = data.answer;
+
+                // Now, initiate the voice conversion
+                textToSpeech(data.answer);
+            });
+        }
+
+        function textToSpeech(text) {
+            // You can implement text-to-speech logic here
+            // You might want to make another AJAX request to your server
+            // Or use a library like Web Speech API
+
+            // For simplicity, let's assume you have a text-to-speech API endpoint on your server
+            fetch('/text-to-speech', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ text }),
+            });
+        }
+
+        // Call fetchChatbotResponse when the page loads or when the user sends a message
+<!--        fetchChatbotResponse();-->
+    </script>
+
+
+</body>
+</html>

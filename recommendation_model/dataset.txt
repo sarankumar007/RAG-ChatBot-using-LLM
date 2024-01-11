@@ -1,0 +1,234 @@
+_id: 65821e30c1a75be0ffd353e2
+name: java backend developer
+jobtype: private job
+qualification: btech
+experience: 1
+longitude: 77.7108574
+latitude: 29.0708486
+
+---
+_id: 658220d2200c3cef674e796a
+name: python backend developer
+jobtype: private job
+qualification: btech
+experience: 2
+longitude: 80.7108574
+latitude: 14.0708486
+
+---
+_id: 658220e9200c3cef674e796b
+name: aws cloud engineer
+jobtype: private job
+qualification: btech
+experience: 5
+longitude: 75.7108574
+latitude: 20.0708486
+
+---
+_id: 6582210a200c3cef674e796c
+name: react frontend developer
+jobtype: private job
+qualification: btech
+experience: 2
+longitude: 77.7108574
+latitude: 29.0708486
+
+---
+_id: 65822150200c3cef674e796d
+name: Teacher
+jobtype: government job
+qualification: mtech
+experience: 10
+longitude: 77.7108574
+latitude: 29.0708486
+
+---
+_id: 65827ffb727c4f1dc39be9ff
+name: marketing head
+jobtype: private job
+qualification: btech
+experience: 5
+longitude: 77.7108574
+latitude: 29.0708486
+
+---
+_id: 65828029727c4f1dc39bea00
+name: finance manager
+jobtype: government job
+qualification: btech
+experience: 10
+longitude: 77.7108574
+latitude: 29.0708486
+
+---
+_id: 65829e99f1cd273893ab164a
+name: Java Backend Developer
+jobtype: Private Job
+qualification: B.Tech
+experience: 1
+longitude: 77.7108574
+latitude: 29.0708486
+
+---
+_id: 65829e99f1cd273893ab164b
+name: Frontend Developer
+jobtype: Private Job
+qualification: B.Sc. in Computer Science
+experience: 2
+longitude: 76.7794
+latitude: 30.7333
+
+---
+_id: 65829e99f1cd273893ab164c
+name: Civil Engineer
+jobtype: Government Job
+qualification: B.Tech in Civil Engineering
+experience: 3
+longitude: 75.9560
+latitude: 30.8500
+
+---
+_id: 65829ecdf1cd273893ab367d
+name: Data Scientist
+jobtype: Private Job
+qualification: M.Sc. in Data Science
+experience: 2
+longitude: 76.7111
+latitude: 30.7046
+
+---
+_id: 65829ecdf1cd273893ab367e
+name: Marketing Executive
+jobtype: Private Job
+qualification: MBA in Marketing
+experience: 1
+longitude: 75.3434
+latitude: 31.6340
+
+---
+_id: 65829ecdf1cd273893ab367f
+name: Graphic Designer
+jobtype: Private Job
+qualification: Diploma in Graphic Design
+experience: 2
+longitude: 74.8745
+latitude: 31.6335
+
+---
+_id: 65829ecdf1cd273893ab3680
+name: Mechanical Engineer
+jobtype: Government Job
+qualification: B.Tech in Mechanical Engineering
+experience: 4
+longitude: 75.9114
+latitude: 30.8500
+
+---
+_id: 65829ecdf1cd273893ab3681
+name: Content Writer
+jobtype: Private Job
+qualification: Bachelor's in English Literature
+experience: 1
+longitude: 76.5312
+latitude: 30.9000
+
+---
+_id: 65829f5bf1cd273893ab8a6b
+name: Software Engineer
+jobtype: Private Job
+qualification: B.Tech in Computer Science
+experience: 3
+longitude: 76.7179
+latitude: 30.7333
+
+---
+_id: 65829f5bf1cd273893ab8a6c
+name: HR Manager
+jobtype: Private Job
+qualification: MBA in Human Resources
+experience: 5
+longitude: 75.8325
+latitude: 31.2160
+
+---
+_id: 65829f5bf1cd273893ab8a6d
+name: Electrician
+jobtype: Skilled Trade
+qualification: ITI in Electrical
+experience: 2
+longitude: 75.3412
+latitude: 31.5775
+
+---
+_id: 65829f5bf1cd273893ab8a6e
+name: Nurse
+jobtype: Healthcare
+qualification: B.Sc. in Nursing
+experience: 3
+longitude: 74.8697
+latitude: 31.6340
+
+---
+_id: 65829f5bf1cd273893ab8a6f
+name: Chef
+jobtype: Hospitality
+qualification: Diploma in Culinary Arts
+experience: 4
+longitude: 76.8551
+latitude: 30.9020
+
+---
+_id: 65829f93f1cd273893abb871
+name: Civil Engineer
+jobtype: Construction
+qualification: B.Tech in Civil Engineering
+experience: 4
+longitude: 74.7973
+latitude: 31.6340
+
+---
+_id: 65829f93f1cd273893abb872
+name: Content Writer
+jobtype: Media
+qualification: Bachelor's in English Literature
+experience: 2
+longitude: 75.8845
+latitude: 30.9000
+
+---
+_id: 65829f93f1cd273893abb873
+name: Sales Executive
+jobtype: Sales
+qualification: Graduate in Business Administration
+experience: 3
+longitude: 76.3526
+latitude: 30.4840
+
+---
+_id: 65829f93f1cd273893abb874
+name: Graphic Designer
+jobtype: Design
+qualification: Diploma in Graphic Designing
+experience: 2
+longitude: 75.4921
+latitude: 30.8583
+
+---
+_id: 65829f93f1cd273893abb875
+name: Mechanical Technician
+jobtype: Manufacturing
+qualification: ITI in Mechanical
+experience: 3
+longitude: 75.9110
+latitude: 31.3891
+
+---
+_id: 658be6bd70ed4668a507284f
+name: taxi driver
+jobtype: private job
+qualification: none
+experience: 2
+longitude: 80.1538048
+latitude: 12.910592
+
+---

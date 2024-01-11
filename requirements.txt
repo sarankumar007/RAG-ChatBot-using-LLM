@@ -1,0 +1,8 @@
+bcrypt~=4.1.1
+langid~=1.1.6
+pygame~=2.5.2
+Flask~=1.1.2
+pymongo~=4.6.1
+gTTS~=2.4.0
+langdetect~=1.0.9
+langchain~=0.0.345

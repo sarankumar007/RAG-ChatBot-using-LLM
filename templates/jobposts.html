@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Posts</title>
+</head>
+<body>
+<h2>Employer's Job Posts</h2>
+
+<form id="userForm" action="/jobpost" method="post">
+    <label for="name">Job Title:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="jobtype">Job Type:</label>
+    <input type="text" id="jobtype" name="jobtype" required><br>
+
+    <label for="qualification">Qualification:</label>
+    <input type="text" id="qualification" name="qualification" required><br>
+
+    <label for="experience">Experience:</label>
+    <input type="text" id="experience" name="experience" required><br>
+
+    <label for="latitude">Latitude:</label>
+    <input type="hidden" id="latitude" name="latitude" required>
+
+    <label for="longitude">Longitude:</label>
+    <input type="hidden" id="longitude" name="longitude" required>
+
+    <button type="button" onclick="getLocation()">Allow Location</button><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+    const latitudeInput = document.getElementById("latitude");
+    const longitudeInput = document.getElementById("longitude");
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            alert("Geolocation is not supported by this browser.");
+        }
+    }
+
+    function showPosition(position) {
+        latitudeInput.value = position.coords.latitude;
+        longitudeInput.value = position.coords.longitude;
+        alert("Location captured!");
+    }
+</script>
+
+</body>
+</html>

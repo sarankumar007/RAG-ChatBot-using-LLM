@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATION FORM</title>
+       <!-- CSS -->
+       <link rel="stylesheet" href="{{ url_for('static', filename='formStyle.css') }}">
+</head>
+
+
+<body>
+    <!-- MAIN-CONTAINER -->
+    <div class="main-container">
+        <!-- FIRST -->
+        <div class="first">
+            <p>Read the Instructions below, before registration with this portal.</p>
+
+            <ul>
+                <li>All the fields having asterisk(*) sign are compulsory to fill</li>
+                <li>Please enter correct mobile number, it is necessary for registration verification.</li>
+                <li>Please have your registered mobile with you, after form submission OTP will be sent on mobile for
+                    verification</li>
+                <li>You can use mobile number only once for registration</li>
+                <li>Your Username, Password and verification OTP will be sent to your registered mobile number after
+                    submit</li>
+                <li>You will be asked for OTP to verify, use OTP sent on your mobile phone</li>
+                <li>If you are already registeredLogin</li>
+            </ul>
+        </div>
+
+        <!-- SECOND -->
+        <div class="second">
+            <!-- REGIS FORM -->
+            <form id="mainForm">
+                <select id="formSelector" onchange="toggleForm()">
+                    <option value="formone">User Registration Form</option>
+                    <option value="formtwo">Employee Form</option>
+                </select>
+            </form>
+                <!-- JOBSEEKER -->
+                <div class="formone">
+                    <h2>Jobseeker</h2>
+                    <form id="userForm" action="/register" method="post">
+                    <input type="text" id="name" name="name" placeholder="Name" required><br>
+                    <input type="tel" id="mobile" name="mobile" placeholder="Mobile No" required><br>
+                    <input type="email" id="email" name="email" placeholder="Email" required><br>
+                    <input type="text" id="education" name="education" placeholder="Education Qualification"
+                        required><br>
+                    <input type="password" id="password" name="password" placeholder="Password" required><br>
+                    <input type="text" id="courses" name="courses" placeholder="Courses Completed" required><br>
+                    <input type="text" id="domain" name="domain" placeholder="Specialized Domain" required><br>
+                    <input type="text" id="skills" name="skills" placeholder="Skill Set" required><br>
+                    <input type="hidden" id="latitude" name="latitude" required>
+                    <input type="hidden" id="longitude" name="longitude" required>
+                    <button type="button" onclick="getLocation()">Allow Location</button><br>
+                    <input type="text" id="preferredJob" name="preferredJob" placeholder="Preferred Job" required><br>
+                    <input type="submit" class="sub" value="Submit">
+                    </form>
+                </div>
+                <!-- EMPLOYER -->
+                <div class="formtwo">
+
+                    <h2>Indian Employer</h2>
+                    <form id="userForm1" action="/registeremployer" method="post">
+                    <input type="text" id="name1" name="name" placeholder="Name" required><br>
+
+                    <input type="tel" id="mobile1" name="mobile" placeholder="Mobile No" required><br>
+
+                    <input type="email" id="email1" name="email" placeholder="Email" required><br>
+
+                    <input type="text" id="gst" name="gst" placeholder="GST" required><br>
+
+                    <input type="text" id="employerID" name="employerID" placeholder="Employer ID" required><br>
+
+                    <input type="password" id="password1" name="password" placeholder="Password" required><br>
+
+                    <input type="submit" class="sub" value="Submit">
+                </form>
+
+                </div>
+
+
+        </div>
+    </div>
+    <script>
+        // FORM
+const latitudeInput = document.getElementById("latitude");
+const longitudeInput = document.getElementById("longitude");
+const formSelector = document.getElementById("formSelector");
+const formone = document.querySelector(".formone");
+const formtwo = document.querySelector(".formtwo");
+
+function toggleForm() {
+    if (formSelector.value === "formone") {
+        formone.style.display = "block";
+        formtwo.style.display = "none";
+    } else if (formSelector.value === "formtwo") {
+        formone.style.display = "none";
+        formtwo.style.display = "block";
+    }
+}
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        alert("Geolocation is not supported by this browser.");
+    }
+}
+
+function showPosition(position) {
+    latitudeInput.value = position.coords.latitude;
+    longitudeInput.value = position.coords.longitude;
+    alert("Location captured!");
+}
+
+    </script>
+</body>
+
+</html>

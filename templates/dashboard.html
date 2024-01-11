@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	<!-- My CSS -->
+	<link rel="stylesheet" href="static/dashboard_style.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='chatStyle.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+	<title>DASHBOARD</title>
+	<style>
+		.hidden {
+			display: none;
+		}
+
+		body {
+			font-family: 'Arial', sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f4f4f4;
+		}
+
+		.gallery {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+			grid-gap: 16px;
+			padding: 16px;
+		}
+
+		.gallery img {
+			width: 100%;
+			height: auto;
+			border-radius: 8px;
+			transition: transform 0.2s;
+			cursor: pointer;
+		}
+
+		.gallery img:hover {
+			transform: scale(1.1);
+		}
+	</style>
+</head>
+
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-smile'></i>
+			<span class="text">Dashboard</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="heading" onclick="showContent('heading1')">
+				<a href="#">
+					<i class='bx bxs-dashboard'></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li class="heading" onclick="showContent('heading2')">
+				<a href="#">
+					<i class='bx bxs-shopping-bag-alt'></i>
+					<span class="text">My Store</span>
+				</a>
+			</li>
+			<li class="heading" onclick="showContent('heading3')">
+				<a href="#">
+					<i class='bx bxs-doughnut-chart'></i>
+					<span class="text">Analytics</span>
+				</a>
+			</li>
+			<li class="heading" onclick="showContent('heading4')">
+				<a href="#">
+					<i class='bx bxs-message-dots'></i>
+					<span class="text">Message</span>
+				</a>
+			</li>
+			<li class="heading" onclick="showContent('heading1')">
+				<a href="#">
+					<i class='bx bxs-group'></i>
+					<span class="text">Team</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li class="heading" onclick="showContent('heading1')">
+				<a href="#">
+					<i class='bx bxs-cog'></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+			<li class="heading" onclick="showContent('heading1')">
+				<a href="/logout" class="logout">
+					<i class='bx bxs-log-out-circle'></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+
+	<!-- SIDEBAR -->
+
+
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu'></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
+				</div>
+			</form>
+			<!-- <input type="checkbox" id="switch-mode" hidden>
+				<label for="switch-mode" class="switch-mode"></label> -->
+			<a href="#" class="notification">
+				<i class='bx bxs-bell'></i>
+				<span class="num">8</span>
+			</a>
+			<a href="#" class="profile">
+				<img src="static/images/people.png">
+			</a>
+		</nav>
+
+
+
+
+
+
+
+		<div id="contents">
+			<div id="heading1" class="">
+
+
+				<div>
+
+				</div>
+			</div>
+			<div id="heading2" class="hidden">Content for Heading 2
+				<div class="gallery">
+					<img src="https://picsum.photos/200/300" alt="Image 1">
+					<img src="https://picsum.photos/200/301" alt="Image 2">
+					<img src="https://picsum.photos/200/302" alt="Image 3">
+					<!-- Add more images with unique URLs -->
+				</div>
+			</div>
+			<div id="heading3" class="hidden">Content for Heading 3</div>
+			<div id="heading4" class="hidden">Content for Heading 4</div>
+		</div>
+	</section>
+	<div class="container">
+    <div class="customized_chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="static/images/pgrkam.png" alt="image">
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">PGRKamAssist</h4>
+                    <p class="chatbox__description--header">Get answers to your queries in any language</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer">
+               <div id="infoBox1">Say something</div>
+              <button id="voiceButton1"><i class="fa fa-microphone" style="font-size:24px"></i></button>
+                <input id="recognizedText1" type="text" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button">Send</button>
+            </div>
+        </div>
+        <div class="customized_chat_button">
+            <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+		<script >function showContent(id) {
+	// Hide all content divs
+	var contentDivs = document.querySelectorAll('#contents > div');
+	contentDivs.forEach(function (div) {
+		div.classList.add('hidden');
+	});
+
+	// Show the selected content div
+	var selectedDiv = document.getElementById(id);
+	selectedDiv.classList.remove('hidden');
+}
+
+
+
+
+const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
+
+allSideMenu.forEach(item => {
+	const li = item.parentElement;
+
+	item.addEventListener('click', function () {
+		allSideMenu.forEach(i => {
+			i.parentElement.classList.remove('active');
+		})
+		li.classList.add('active');
+	})
+});
+
+
+
+
+// TOGGLE SIDEBAR
+const menuBar = document.querySelector('#content nav .bx.bx-menu');
+const sidebar = document.getElementById('sidebar');
+
+menuBar.addEventListener('click', function () {
+	sidebar.classList.toggle('hide');
+})
+
+
+
+
+
+
+
+const searchButton = document.querySelector('#content nav form .form-input button');
+const searchButtonIcon = document.querySelector('#content nav form .form-input button .bx');
+const searchForm = document.querySelector('#content nav form');
+
+searchButton.addEventListener('click', function (e) {
+	if (window.innerWidth < 576) {
+		e.preventDefault();
+		searchForm.classList.toggle('show');
+		if (searchForm.classList.contains('show')) {
+			searchButtonIcon.classList.replace('bx-search', 'bx-x');
+		} else {
+			searchButtonIcon.classList.replace('bx-x', 'bx-search');
+		}
+	}
+})
+
+
+
+
+
+if (window.innerWidth < 768) {
+	sidebar.classList.add('hide');
+} else if (window.innerWidth > 576) {
+	searchButtonIcon.classList.replace('bx-x', 'bx-search');
+	searchForm.classList.remove('show');
+}
+
+
+window.addEventListener('resize', function () {
+	if (this.innerWidth > 576) {
+		searchButtonIcon.classList.replace('bx-x', 'bx-search');
+		searchForm.classList.remove('show');
+	}
+})
+
+
+
+const switchMode = document.getElementById('switch-mode');
+
+switchMode.addEventListener('change', function () {
+	if (this.checked) {
+		document.body.classList.add('dark');
+	} else {
+		document.body.classList.remove('dark');
+	}
+})</script>
+<script>
+        $SCRIPT_ROOT = {{ request.script_root|tojson }};
+    </script>
+    <script >
+
+
+
+		class  Chatbox{
+    constructor(){
+        this.args={
+        openButton: document.querySelector('.customized_chat_button'),
+        chatBox: document.querySelector('.chatbox__support'),
+        sendButton:   document.querySelector('.send__button')
+
+        }
+
+        this.state=false;
+        this.messages=[];
+
+
+    }
+
+    display(){
+        const {openButton,chatBox,sendButton}=  this.args;
+
+        openButton.addEventListener('click',()=>this.toggleState(chatBox))
+        sendButton.addEventListener('click',()=>this.onSendButton(chatBox))
+
+        const  node=chatBox.querySelector('input');
+        node.addEventListener("keyup",({key})=>{
+            if( key=="Enter"){
+                this.onSendButton(chatBox)
+            }
+    })
+}
+
+    toggleState(chatBox){
+        this.state=!this.state;
+        if(this.state){
+            chatBox.classList.add('chatbox--active')
+            var html='<a href="https://example.com" class="start-buttons">Visit Example.com</a>';
+            const chatmessage = chatbox.querySelector('.chatbox__messages');
+        chatmessage.innerHTML = html;
+        }
+        else{
+            chatBox.classList.remove('chatbox--active')
+        }
+
+    }
+
+    onSendButton(chatBox){
+    var textField=chatBox.querySelector('input');
+    let text1=textField.value
+    if(text1==""){
+    return;
+    }
+
+    let msg1={name:"User",message:text1}
+    this.messages.push(msg1);
+
+    fetch($SCRIPT_ROOT + '/recommend',{
+    method: 'POST',
+    body: JSON.stringify({message:text1,email: '{{email}}' }),
+    mode:'cors',
+    headers:{
+    'Content-Type': 'application/json'
+    },
+
+    })
+    .then(r=>r.json())
+    .then(r=>{
+    let msg2={name:"Sam",message: r.answer};
+    this.messages.push(msg2);
+    this.updateChatText(chatBox)
+    textField.value=''
+    }). catch((error)=>{
+    console.error('Error:',error);
+    this.updateChatText(chatBox)
+    textField.value=''
+
+    });
+
+    }
+
+
+
+    updateChatText(chatBox){
+    var html='';
+    this.messages.slice().reverse().forEach(function(item,){
+        if(item.name=="Sam"){
+        const urlRegex = /(https?:\/\/[^\s]+)/g;
+        const messageWithLink = item.message.replace(urlRegex, '<a href="$1" target="_blank">$1</a>');
+
+        html+='<div class="messages__item messages__item--visitor">' + messageWithLink  + '</div>'
+        }
+        else{
+        html+='<div class="messages__item messages__item--operator">' + item.message +'</div>'
+        }
+    });
+
+    const chatmessage=chatBox.querySelector('.chatbox__messages');
+    chatmessage.innerHTML=html;
+    chatmessage.scrollTop = chatmessage.scrollHeight;
+
+    }
+
+   }
+
+ const chatbox=new Chatbox();
+ chatbox.display();</script>
+
+
+<!--VOICE SCRIPT-->
+<script>
+          $(document).ready(function() {
+            $("#voiceButton1").on("click", function() {
+                $.post("/recognize", function(data) {
+                    $("#recognizedText1").val(data.text);
+                    alert("Language detected: " + data.language);
+                });
+            });
+        });
+  document.getElementById("voiceButton1").addEventListener("click", function() {
+            var infoBox = document.getElementById("infoBox1");
+            infoBox.style.display = "block";
+            console.log("Voice button clicked!")
+
+            // You can add additional logic or content to the info box here
+
+            // For example, let's hide the box after 2 seconds
+            setTimeout(function() {
+                infoBox.style.display = "none";
+            }, 2000);
+        });</script>
+
+  <script>
+        function fetchChatbotResponse() {
+            // Make an AJAX request to your Flask server
+            // Update the URL and other parameters based on your server setup
+            fetch('/recommend', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ message: 'Your user input here' }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display the text response
+                document.getElementById('response-container').innerText = data.answer;
+
+                // Now, initiate the voice conversion
+                textToSpeech(data.answer);
+            });
+        }
+
+        function textToSpeech(text) {
+            // You can implement text-to-speech logic here
+            // You might want to make another AJAX request to your server
+            // Or use a library like Web Speech API
+
+            // For simplicity, let's assume you have a text-to-speech API endpoint on your server
+            fetch('/text-to-speech', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ text }),
+            });
+        }
+
+        // Call fetchChatbotResponse when the page loads or when the user sends a message
+<!--        fetchChatbotResponse();-->
+    </script>
+
+
+
+
+
+</body>
+
+</html>
